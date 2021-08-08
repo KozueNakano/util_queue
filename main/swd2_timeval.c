@@ -1,6 +1,3 @@
-/*thanks
-https://mcommit.hatenadiary.com/entry/2017/09/23/222902
-*/
 #include "swd2_timeval.h"
 
 void add_timeval_us(struct timeval *time , uint64_t add_us){
