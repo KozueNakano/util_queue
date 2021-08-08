@@ -11,9 +11,11 @@ http://www.cc.kyoto-su.ac.jp/~yamada/ap/queue.html
 #include "swd2_queue.h"
 #include "swd2_timeval.h"
 static const char *TAG = "fastATTR";
-
+//https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/memory-types.html#rtc-fast-memory
+//RTC_FAST_ATTRにはPRO CPU (core0)からのみアクセスできる。
+//https://www.esp32.com/viewtopic.php?t=18220
+//app_mainはcore0で実行される。
 RTC_FAST_ATTR static bool directionFlag =  true;
-
 data_t d;
 RTC_FAST_ATTR queue_t que;
 
